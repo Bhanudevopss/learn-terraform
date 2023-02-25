@@ -15,6 +15,6 @@ output "sample1" {
 variable "cli" {}
 
 output "cli" {
-  value = "var.cli"
+  value = var.cli
 }
 
