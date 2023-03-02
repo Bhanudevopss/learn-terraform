@@ -48,25 +48,25 @@ variable "instances" {
 //}
 
 ## Little mature code
-variable "demo" {
-  default = [
-    {
-      name = "catalogue"
-      type = "t3.micro"
-    },
-    {
-      name = "user"
-      type = "t3.small"
-    }
-  ]
-}
-
-resource "aws_instance" "instances" {
-  count = length(var.demo)
-  ami = "ami-0a017d8ceb274537d"
-  instance_type = var.demo[count.index]["type"]
-  vpc_security_group_ids = ["sg-07d70a19582692526"]
-  tags = {
-    Name = var.demo[count.index]["name"]
-  }
-}
+//variable "demo" {
+//  default = [
+//    {
+//      name = "catalogue"
+//      type = "t3.micro"
+//    },
+//    {
+//      name = "user"
+//      type = "t3.small"
+//    }
+//  ]
+//}
+//
+//resource "aws_instance" "instances" {
+//  count = length(var.demo)
+//  ami = "ami-0a017d8ceb274537d"
+//  instance_type = var.demo[count.index]["type"]
+//  vpc_security_group_ids = ["sg-07d70a19582692526"]
+//  tags = {
+//    Name = var.demo[count.index]["name"]
+//  }
+//}
